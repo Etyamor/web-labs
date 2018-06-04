@@ -499,6 +499,10 @@ td, th {
   color: green;
 }
 
+header ul .active {
+  color: green;
+}
+
 .menu ul a:hover {
   color: green;
 }
@@ -527,11 +531,53 @@ td, th {
   font-weight: bold;
 }
 
+.burger {
+  opacity: 0;
+  display: inline-block;
+}
 
 @media screen and (max-width: 1460px) {
   footer ul {
     padding-left: 50px;
     padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .burger {
+    opacity: 1;
+    position: relative;
+    width: 22px;
+    height: 19px;
+  }  
+  .burger span {
+    box-sizing: content-box;
+    display: block;
+    position: relative;
+    height: 1px;
+    width: 22px;
+    background-color: #000;
+  }
+  .burger span:first-child {
+    top: 0;
+  }
+  .burger span:nth-child(2) {
+    top: 8px;
+  }
+  .burger span:last-child {
+    bottom: -16px;
+  }
+  header ul {
+    display: none;
+  }
+
+  header ul.opened {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: #fff;
+    z-index: 10;
+    left: 200px;
   }
 }
 
