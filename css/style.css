@@ -488,6 +488,7 @@ td, th {
 
 .menu ul {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   padding: 10px;
@@ -579,6 +580,12 @@ header ul .active {
     z-index: 10;
     left: 200px;
   }
+
+  .menu ul,
+  footer ul {
+  flex-direction: column;
+}
+
 }
 
 /*MAIN STYLES*/
